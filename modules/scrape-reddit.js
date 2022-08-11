@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
 
-async function getSubredditTopCommentHeader(subreddit) {
-	const url = `https://www.reddit.com/r/${subreddit}/top/`;
+async function getSubredditTopCommentHeader(subreddit, interval = 'day') {
+	const url = `https://www.reddit.com/r/${subreddit}/top/?t=${interval}`;
 
 	// Start puppeteer
 	const browser = await puppeteer.launch({ headless: true });
@@ -23,8 +23,8 @@ async function getSubredditTopCommentHeader(subreddit) {
 	return topComment;
 }
 
-async function getSubredditTopCommentContent(subreddit) {
-	const url = `https://www.reddit.com/r/${subreddit}/top/`;
+async function getSubredditTopCommentContent(subreddit, interval = 'day') {
+	const url = `https://www.reddit.com/r/${subreddit}/top/?t=${interval}`;
 
 	// Start puppeteer
 	const browser = await puppeteer.launch({ headless: true });

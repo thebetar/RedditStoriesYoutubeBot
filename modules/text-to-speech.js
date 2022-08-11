@@ -5,11 +5,10 @@ const path = require('path');
  * Generates wav file from string provided
  * @param {string} file
  * @param {string} text
- * @returns {string}
+ * @returns {Promise<string>}
  */
 function textToSpeech(file, text) {
 	const filePath = path.resolve(__dirname, '../output', file);
-	console.log(filePath);
 	return new Promise((resolve) => {
 		gtts.save(filePath, text, () => {
 			resolve(filePath);

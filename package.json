@@ -1,17 +1,21 @@
 {
-  "name": "redditstoriesyoutube",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "node-gtts": "^2.0.2",
-    "path": "^0.12.7",
-    "puppeteer": "^16.1.0"
-  }
+	"name": "redditstoriesyoutube",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon index"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"node-gtts": "^2.0.2",
+		"node-schedule": "^2.1.0",
+		"path": "^0.12.7",
+		"puppeteer": "^16.1.0"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.19"
+	}
 }
